@@ -1,58 +1,84 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>My Resume</title>
+  <title>My Creative Resume</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      margin: 20px;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
     }
     h1 {
-      color: #333;
+      margin: 0;
+      font-size: 28px;
     }
     h2 {
+      margin: 0;
+      font-size: 22px;
       color: #666;
     }
-    p {
+    .container {
+      max-width: 960px;
+      margin: 20px auto;
+      padding: 0 20px;
+    }
+    .project {
+      margin-bottom: 40px;
+    }
+    .project h3 {
+      font-size: 20px;
       margin-bottom: 10px;
     }
-    ul {
-      list-style-type: disc;
-      margin: 0;
-      padding-left: 20px;
+    .project img {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 10px;
+    }
+    .project p {
+      color: #666;
     }
   </style>
 </head>
 <body>
-  <h1>Your Name</h1>
-  <h2>Android Developer</h2>
+  <header>
+    <h1>Your Name</h1>
+    <h2>Android Developer</h2>
+  </header>
   
-  <h3>Contact Information</h3>
-  <ul>
-    <li>Email: myofficework000@gmail.com</li>
-    <li>Phone: +44 7438420444, +91 9599652867</li>
-    <li>GitHub: <a href="https://github.com/myofficework000">github.com/myofficework000</a></li>
-  </ul>
+  <div class="container">
+    <div class="project">
+      <h3>Project 1</h3>
+      <img src="project1.jpg" alt="Project 1">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce malesuada ligula sed neque malesuada dignissim.</p>
+    </div>
+    
+    <div class="project">
+      <h3>Project 2</h3>
+      <img src="project2.jpg" alt="Project 2">
+      <p>Sed euismod consectetur dui, nec ultrices sem venenatis sit amet. Suspendisse ullamcorper venenatis nulla, vel dictum metus auctor nec.</p>
+    </div>
+    
+    <!-- Add more projects as needed -->
+  </div>
   
-  <h3>Skills</h3>
-  <ul>
-    <li>Java</li>
-    <li>Kotlin</li>
-    <li>Android SDK</li>
-    <li>RESTful APIs</li>
-    <li>Git</li>
-  </ul>
-  
-  <h3>Education</h3>
-  <p>Bachelor of Science in Computer Science, ABES Engineering College, India</p>
-  
-  <h3>Work Experience</h3>
-  <p>Android Lead,Wipro (2020-Present)</p>
-  <ul>
-    <li>Developed and maintained mobile applications using Java and Kotlin.</li>
-    <li>Collaborated with cross-functional teams to deliver high-quality software.</li>
-    <li>Implemented UI/UX designs and integrated API functionalities.</li>
-  </ul>
-  
- </body>
+  <script>
+    // Optional: Add interactivity or animations using JavaScript
+    
+    // Example: Fade in projects on scroll
+    window.addEventListener('scroll', function() {
+      var projects = document.querySelectorAll('.project');
+      projects.forEach(function(project) {
+        if (project.getBoundingClientRect().top < window.innerHeight) {
+          project.classList.add('fade-in');
+        }
+      });
+    });
+  </script>
+</body>
 </html>
